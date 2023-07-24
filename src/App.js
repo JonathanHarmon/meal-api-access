@@ -116,32 +116,7 @@ function App() {
     console.log(`ingredient: ${ingredient}, index: ${i}`)
   );
 
-  // for (let i = 1; i < 21; i++) {
-  //   let ingredients = [];
-  //   const item = "strIngredient" + i;
-  //   if (data[0].item) {
-  //     ingredients.push(item);
-  //   }
-  //   console.log(ingredients);
-  // }
-
-  // const ingredientList = [];
-  // let i = 1;
-  // let ingredient = "strIngredient" + i;
-  // console.log(ingredient);
-  // let item = data[0].ingredient;
-  // console.log(item);
-  // ingredientList.push(data[0].ingredient);
-  // console.log(ingredientList);
   return (
-    // <div className="App">
-    //   <h5>{data[0].strMeal}</h5>
-    //   <p>{data[0].strInstructions}</p>
-    //   <img src={data[0].strMealThumb} alt="#" />
-    //   <Button variant="primary" onClick={refetch}>
-    //     Get Another Meal
-    //   </Button>
-    // </div>
     <>
       <CardGroup>
         <Card style={{ width: "2rem" }}>
