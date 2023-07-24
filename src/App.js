@@ -112,10 +112,6 @@ function App() {
     },
   ];
 
-  ingredients.forEach((ingredient, i) =>
-    console.log(`ingredient: ${ingredient}, index: ${i}`)
-  );
-
   return (
     <>
       <CardGroup>
