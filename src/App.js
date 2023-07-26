@@ -115,24 +115,27 @@ function App() {
   return (
     <>
       <CardGroup>
-        <Card style={{ width: "2rem" }}>
-          <Card.Img variant="top" src={data[0].strMealThumb} />
-        </Card>
-        <Card style={{ width: "2rem" }}>
-          <ListGroup className="list-group-flush">
-            {ingredients.map((p, index) => {
-              if (p.ingredientName !== "" && p.ingredientName !== null) {
-                return (
-                  <ListGroupItem key={index}>
-                    {p.ingredientMeasure}&nbsp;{p.ingredientName}
-                  </ListGroupItem>
-                );
-              }
-            })}
-          </ListGroup>
+        <Card border="light">
           <Card.Body>
             <Card.Title>{data[0].strMeal}</Card.Title>
-            {/* <Card.Text>{data[0].strIngredient1}</Card.Text> */}
+            <Card.Img variant="top" src={data[0].strMealThumb} />
+          </Card.Body>
+        </Card>
+        <Card border="light">
+          <Card.Body>
+            <Card.Text>
+              <ListGroup variant="flush">
+                {ingredients.map((p, index) => {
+                  if (p.ingredientName !== "" && p.ingredientName !== null) {
+                    return (
+                      <ListGroupItem variant="light" key={index}>
+                        {p.ingredientMeasure}&nbsp;{p.ingredientName}
+                      </ListGroupItem>
+                    );
+                  }
+                })}
+              </ListGroup>
+            </Card.Text>
             <Card.Text>{data[0].strInstructions}</Card.Text>
             <Button variant="primary" onClick={refetch}>
               Get Another Meal
